@@ -1,0 +1,12 @@
+{
+    "name": "artisanhub",
+    "private": true,
+    "workspaces": [
+        "apps/*"
+    ],
+    "packageManager": "yarn@1.22.22",
+    "scripts": {
+        "dev:storefront": "yarn workspace apps/storefront dev",
+        "dev:app": "yarn workspace apps/vendor-app dev"
+    }
+}
