@@ -12,13 +12,13 @@ export const COLLECTIONS_QUERY = `
 `;
 
 export const COLLECTION_BY_HANDLE_QUERY = `
-  query CollectionByHandle($handle: String!, $first: Int!) {
+  query CollectionByHandle($handle: String!, $first: Int!, $filters: [ProductFilter!]) {
     collection(handle: $handle) {
       id title handle description
-      products(first: $first) {
+      products(first: $first, filters: $filters) {
         edges {
           node {
-            id title handle vendor
+            id title handle vendor tags
             priceRange {
               minVariantPrice { amount currencyCode }
             }

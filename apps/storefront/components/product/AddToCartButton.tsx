@@ -39,6 +39,7 @@ export function AddToCartButton({
 
   return (
     <button
+      type="button"
       onClick={handleAdd}
       disabled={status === "updating" || added}
       className="flex h-10 w-full items-center justify-center gap-1.5 rounded-full

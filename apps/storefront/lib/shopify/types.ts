@@ -69,8 +69,16 @@ export interface Money {
     lines: { edges: { node: CartLine }[] };
   }
   
+  export interface VendorProfileField {
+    key: string;
+    value: string;
+    reference?: {
+      image?: { url: string; altText: string | null } | null;
+    } | null;
+  }
+
   export interface VendorProfile {
     id: string;
     handle: string;
-    fields: { key: string; value: string }[];
+    fields: VendorProfileField[];
   }

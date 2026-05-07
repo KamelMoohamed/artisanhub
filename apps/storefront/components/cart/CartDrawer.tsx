@@ -17,6 +17,7 @@ export function CartDrawer({ locale, messages }: CartDrawerProps) {
   const { isOpen, close } = useCartDrawer();
   const { lines = [], cost, checkoutUrl, status } = useCart();
   const panelRef = useRef<HTMLDivElement>(null);
+  const hiddenTranslateClass = locale === "ar" ? "-translate-x-full" : "translate-x-full";
 
   // Close on Escape
   useEffect(() => {
@@ -56,7 +57,7 @@ export function CartDrawer({ locale, messages }: CartDrawerProps) {
         aria-label={messages.cart.title}
         className={`fixed inset-y-0 end-0 z-50 flex w-full max-w-md flex-col bg-white shadow-2xl
                     transition-transform duration-300 ease-in-out
-                    ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+                    ${isOpen ? "translate-x-0" : hiddenTranslateClass}`}
       >
         {/* Header */}
         <div className="flex items-center justify-between border-b border-stone-100 px-6 py-5">

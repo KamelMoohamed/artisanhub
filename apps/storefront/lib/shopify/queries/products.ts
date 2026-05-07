@@ -1,6 +1,17 @@
+// Lightweight query used only for generateStaticParams — fetches up to 250 handles.
+export const PRODUCT_HANDLES_QUERY = `
+  query ProductHandles($first: Int!) {
+    products(first: $first) {
+      edges {
+        node { handle }
+      }
+    }
+  }
+`;
+
 export const PRODUCTS_QUERY = `
-  query Products($first: Int!, $filters: [ProductFilter!]) {
-    products(first: $first, filters: $filters) {
+  query Products($first: Int!) {
+    products(first: $first) {
       edges {
         node {
           id title handle vendor tags
@@ -50,7 +61,7 @@ export const FEATURED_COLLECTION_QUERY = `
       products(first: 8) {
         edges {
           node {
-            id title handle vendor
+            id title handle vendor tags
             priceRange {
               minVariantPrice { amount currencyCode }
             }

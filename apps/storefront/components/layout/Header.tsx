@@ -3,6 +3,7 @@ import type { Locale } from "@/lib/i18n/config";
 import { i18nConfig } from "@/lib/i18n/config";
 import type { Messages } from "@/lib/i18n/getMessages";
 import { LocaleSwitcher } from "@/components/ui/LocaleSwitcher";
+import { Search } from "@/components/ui/Search";
 import { CartWidget } from "./CartWidget";
 
 interface HeaderProps {
@@ -39,7 +40,7 @@ export function Header({ locale, messages }: HeaderProps) {
         </Link>
 
         {/* ── Primary nav ── */}
-        <nav aria-label="Main navigation" className="hidden flex-1 md:flex">
+        <nav aria-label="Main navigation" className="hidden md:flex">
           <ul className="flex items-center gap-0.5">
             {navLinks.map(({ label, href }) => (
               <li key={href}>
@@ -54,6 +55,11 @@ export function Header({ locale, messages }: HeaderProps) {
             ))}
           </ul>
         </nav>
+
+        {/* ── Search bar ── */}
+        <div className="hidden w-48 lg:block xl:w-64">
+          <Search locale={locale} messages={messages} variant="bar" />
+        </div>
 
         {/* ── Right controls ── */}
         <div className="flex items-center gap-1 ms-auto">

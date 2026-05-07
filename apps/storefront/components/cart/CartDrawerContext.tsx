@@ -24,9 +24,9 @@ export function CartDrawerProvider({ children }: { children: ReactNode }) {
   const toggle = useCallback(() => setIsOpen((v) => !v), []);
 
   return (
-    <CartDrawerContext value={{ isOpen, open, close, toggle }}>
+    <CartDrawerContext.Provider value={{ isOpen, open, close, toggle }}>
       {children}
-    </CartDrawerContext>
+    </CartDrawerContext.Provider>
   );
 }
 
