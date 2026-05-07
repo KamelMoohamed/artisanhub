@@ -32,6 +32,38 @@ required = true
 name = "Description"
 type = "multi_line_text_field"
 
+[metaobjects.app.vendor_profile]
+name = "Vendor Profile"
+description = "Stores public profile data for each vendor on ArtisanHub"
+
+  [metaobjects.app.vendor_profile.access]
+  admin = "merchant_read_write"
+
+[metaobjects.app.vendor_profile.fields.name]
+name = "Name"
+type = "single_line_text_field"
+required = true
+
+[metaobjects.app.vendor_profile.fields.bio]
+name = "Bio"
+type = "multi_line_text_field"
+
+[metaobjects.app.vendor_profile.fields.country]
+name = "Country"
+type = "single_line_text_field"
+
+[metaobjects.app.vendor_profile.fields.email]
+name = "Email"
+type = "single_line_text_field"
+
+[metaobjects.app.vendor_profile.fields.shipping_note]
+name = "Shipping Note"
+type = "multi_line_text_field"
+
+[metaobjects.app.vendor_profile.fields.founded_year]
+name = "Founded Year"
+type = "number_integer"
+
 [webhooks]
 api_version = "2026-07"
 
@@ -42,6 +74,10 @@ api_version = "2026-07"
   [[webhooks.subscriptions]]
   uri = "/webhooks/app/scopes_update"
   topics = [ "app/scopes_update" ]
+
+  [[webhooks.subscriptions]]
+  uri = "/webhooks"
+  topics = [ "orders/create", "products/update" ]
 
 [auth]
 redirect_urls = [ "https://example.com/api/auth" ]

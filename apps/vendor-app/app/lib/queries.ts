@@ -38,7 +38,7 @@ export const VENDOR_PROFILE_GET = `#graphql
 
 export const VENDOR_PROFILES_LIST = `#graphql
   query VendorProfiles($first: Int!) {
-    metaobjects(type: "vendor_profile", first: $first) {
+    metaobjects(type: "$app:vendor_profile", first: $first) {
       edges {
         node {
           id handle
@@ -69,20 +69,58 @@ export const PRODUCTS_LIST = `#graphql
   }
 `;
 
+export const PRODUCT_GET = `#graphql
+  query GetProduct($id: ID!) {
+    product(id: $id) {
+      id title descriptionHtml status
+      tags
+      variants(first: 1) {
+        edges { node { id price compareAtPrice } }
+      }
+      featuredImage { url altText }
+    }
+  }
+`;
+
 export const PRODUCT_CREATE = `#graphql
-  mutation ProductCreate($input: ProductInput!) {
-    productCreate(input: $input) {
-      product { id title handle }
+  mutation ProductCreate($product: ProductCreateInput!, $media: [CreateMediaInput!]) {
+    productCreate(product: $product, media: $media) {
+      product {
+        id title handle
+        variants(first: 1) { edges { node { id } } }
+      }
       userErrors { field message }
     }
   }
 `;
 
 export const PRODUCT_UPDATE = `#graphql
-  mutation ProductUpdate($input: ProductInput!) {
-    productUpdate(input: $input) {
+  mutation ProductUpdate($id: ID!, $product: ProductUpdateInput!) {
+    productUpdate(id: $id, product: $product) {
       product { id title }
       userErrors { field message }
+    }
+  }
+`;
+
+export const PRODUCT_VARIANT_BULK_UPDATE = `#graphql
+  mutation ProductVariantsBulkUpdate(
+    $productId: ID!
+    $variants: [ProductVariantsBulkInput!]!
+  ) {
+    productVariantsBulkUpdate(productId: $productId, variants: $variants) {
+      productVariants { id price compareAtPrice }
+      userErrors { field message }
+    }
+  }
+`;
+
+export const PRODUCT_CREATE_MEDIA = `#graphql
+  mutation ProductCreateMedia($productId: ID!, $media: [CreateMediaInput!]!) {
+    productCreateMedia(productId: $productId, media: $media) {
+      media { ... on MediaImage { id image { url } } }
+      mediaUserErrors { field message }
+      product { id }
     }
   }
 `;

@@ -13,6 +13,22 @@ datasource db {
   url      = "file:dev.sqlite"
 }
 
+// Stores inbound webhook events for auditing and alerting.
+// Run: prisma migrate dev --name add-notification-table
+model Notification {
+  id           String   @id @default(cuid())
+  shop         String
+  topic        String
+  referenceId  String
+  vendorHandle String?
+  summary      String
+  payload      String
+  createdAt    DateTime @default(now())
+
+  @@index([shop, topic])
+  @@index([shop, createdAt])
+}
+
 model Session {
   id            String    @id
   shop          String
