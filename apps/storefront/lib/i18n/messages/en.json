@@ -1,0 +1,30 @@
+{
+    "nav": {
+        "home": "Home",
+        "products": "Products",
+        "vendors": "Vendors",
+        "cart": "Cart",
+        "search": "Search"
+    },
+    "product": {
+        "addToCart": "Add to Cart",
+        "outOfStock": "Out of Stock",
+        "by": "by"
+    },
+    "cart": {
+        "title": "Your Cart",
+        "empty": "Your cart is empty",
+        "checkout": "Proceed to Checkout",
+        "total": "Total",
+        "remove": "Remove"
+    },
+    "vendor": {
+        "founded": "Founded",
+        "from": "From",
+        "products": "Products by this vendor"
+    },
+    "search": {
+        "placeholder": "Search products...",
+        "noResults": "No results found"
+    }
+}

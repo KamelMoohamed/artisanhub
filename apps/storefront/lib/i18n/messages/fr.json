@@ -1,0 +1,30 @@
+{
+    "nav": {
+        "home": "Accueil",
+        "products": "Produits",
+        "vendors": "Vendeurs",
+        "cart": "Panier",
+        "search": "Rechercher"
+    },
+    "product": {
+        "addToCart": "Ajouter au panier",
+        "outOfStock": "Rupture de stock",
+        "by": "par"
+    },
+    "cart": {
+        "title": "Votre panier",
+        "empty": "Votre panier est vide",
+        "checkout": "Passer la commande",
+        "total": "Total",
+        "remove": "Supprimer"
+    },
+    "vendor": {
+        "founded": "Fondé en",
+        "from": "De",
+        "products": "Produits de ce vendeur"
+    },
+    "search": {
+        "placeholder": "Rechercher des produits...",
+        "noResults": "Aucun résultat trouvé"
+    }
+}

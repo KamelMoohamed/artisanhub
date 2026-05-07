@@ -1,0 +1,30 @@
+{
+    "nav": {
+        "home": "الرئيسية",
+        "products": "المنتجات",
+        "vendors": "البائعون",
+        "cart": "السلة",
+        "search": "بحث"
+    },
+    "product": {
+        "addToCart": "أضف إلى السلة",
+        "outOfStock": "غير متوفر",
+        "by": "بواسطة"
+    },
+    "cart": {
+        "title": "سلة التسوق",
+        "empty": "سلتك فارغة",
+        "checkout": "إتمام الشراء",
+        "total": "الإجمالي",
+        "remove": "حذف"
+    },
+    "vendor": {
+        "founded": "تأسست",
+        "from": "من",
+        "products": "منتجات هذا البائع"
+    },
+    "search": {
+        "placeholder": "ابحث عن منتجات...",
+        "noResults": "لا توجد نتائج"
+    }
+}
