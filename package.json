@@ -4,9 +4,8 @@
     "workspaces": [
         "apps/*"
     ],
-    "packageManager": "yarn@1.22.22",
     "scripts": {
-        "dev:storefront": "yarn workspace apps/storefront dev",
-        "dev:app": "yarn workspace apps/vendor-app dev"
+        "dev:storefront": "npm -w apps/storefront run dev",
+        "dev:app": "npm -w apps/vendor-app run dev"
     }
 }
