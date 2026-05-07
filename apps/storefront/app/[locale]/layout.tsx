@@ -58,8 +58,8 @@ export default async function LocaleLayout({
     >
       <body className="flex min-h-full flex-col bg-white font-sans text-stone-900">
         <ShopifyCartProvider
-          countryCode={config.countryCode}
-          languageCode={config.language}
+          countryIsoCode={config.countryCode}
+          languageIsoCode={config.language}
         >
           <CartDrawerProvider>
             <Header locale={locale} messages={messages} />

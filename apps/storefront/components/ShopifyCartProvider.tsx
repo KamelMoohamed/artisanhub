@@ -13,14 +13,14 @@ const STOREFRONT_API_VERSION = "2025-01";
 
 interface ShopifyCartProviderProps {
   children: React.ReactNode;
-  countryCode: CountryCode;
-  languageCode: LanguageCode;
+  countryIsoCode: CountryCode;
+  languageIsoCode: LanguageCode;
 }
 
 export function ShopifyCartProvider({
   children,
-  countryCode,
-  languageCode,
+  countryIsoCode,
+  languageIsoCode,
 }: ShopifyCartProviderProps) {
   // Both env vars are also read in `lib/shopify/client.ts`.
   // They are `NEXT_PUBLIC_*` so they're available on the client.
@@ -40,10 +40,10 @@ export function ShopifyCartProvider({
       storeDomain={storeDomain}
       storefrontToken={storefrontToken}
       storefrontApiVersion={STOREFRONT_API_VERSION}
-      countryIsoCode={countryCode}
-      languageIsoCode={languageCode}
+      countryIsoCode={countryIsoCode}
+      languageIsoCode={languageIsoCode}
     >
-      <CartProvider countryCode={countryCode} languageCode={languageCode}>
+      <CartProvider countryCode={countryIsoCode} languageCode={languageIsoCode}>
         {children}
       </CartProvider>
     </ShopifyProvider>

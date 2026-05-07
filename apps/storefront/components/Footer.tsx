@@ -1,5 +1,5 @@
-import Link from "next/link";
 import type { Locale } from "@/lib/i18n/config";
+import Link from "next/link";
 
 interface FooterProps {
   locale: Locale;
