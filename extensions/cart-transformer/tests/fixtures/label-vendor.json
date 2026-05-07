@@ -1,0 +1,45 @@
+{
+  "cart": {
+    "lines": [
+      {
+        "id": "line1",
+        "quantity": 2,
+        "merchandise": {
+          "__typename": "ProductVariant",
+          "id": "variant1",
+          "title": "Default Title",
+          "product": {
+            "title": "Ceramic Bowl",
+            "metafield": { "value": "vendor-egypt-ceramics" }
+          }
+        }
+      },
+      {
+        "id": "line2",
+        "quantity": 1,
+        "merchandise": {
+          "__typename": "ProductVariant",
+          "id": "variant2",
+          "title": "Size M",
+          "product": {
+            "title": "Linen Shirt",
+            "metafield": { "value": "vendor-french-linen" }
+          }
+        }
+      },
+      {
+        "id": "line3",
+        "quantity": 1,
+        "merchandise": {
+          "__typename": "ProductVariant",
+          "id": "variant3",
+          "title": "Default Title",
+          "product": {
+            "title": "Generic Item",
+            "metafield": null
+          }
+        }
+      }
+    ]
+  }
+}

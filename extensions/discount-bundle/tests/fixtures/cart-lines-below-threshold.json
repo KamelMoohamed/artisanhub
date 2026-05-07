@@ -1,0 +1,25 @@
+{
+  "cart": {
+    "lines": [
+      {
+        "id": "gid://shopify/CartLine/1",
+        "quantity": 1,
+        "merchandise": {
+          "__typename": "ProductVariant",
+          "id": "gid://shopify/ProductVariant/1",
+          "product": { "metafield": { "value": "vendor-egyptian-ceramics" } }
+        }
+      },
+      {
+        "id": "gid://shopify/CartLine/2",
+        "quantity": 1,
+        "merchandise": {
+          "__typename": "ProductVariant",
+          "id": "gid://shopify/ProductVariant/2",
+          "product": { "metafield": { "value": "vendor-egyptian-ceramics" } }
+        }
+      }
+    ]
+  },
+  "discount": { "discountClasses": ["PRODUCT"] }
+}

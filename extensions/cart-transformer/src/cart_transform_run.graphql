@@ -1,0 +1,20 @@
+query CartTransformRunInput {
+  cart {
+    lines {
+      id
+      quantity
+      merchandise {
+        ... on ProductVariant {
+          id
+          title
+          product {
+            title
+            metafield(namespace: "artisanhub", key: "vendor_id") {
+              value
+            }
+          }
+        }
+      }
+    }
+  }
+}

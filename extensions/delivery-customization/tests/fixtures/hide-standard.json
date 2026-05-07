@@ -1,0 +1,21 @@
+{
+  "cart": {
+    "deliveryGroups": [
+      {
+        "id": "gid://shopify/CartDeliveryGroup/0",
+        "deliveryOptions": [
+          { "handle": "standard", "title": "Standard Shipping" },
+          { "handle": "express",  "title": "Express Shipping" }
+        ],
+        "cartLines": [
+          {
+            "merchandise": {
+              "__typename": "ProductVariant",
+              "product": { "hasAnyTag": true }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "cart": {
+    "lines": [
+      {
+        "id": "line1",
+        "quantity": 1,
+        "merchandise": {
+          "__typename": "ProductVariant",
+          "id": "variant1",
+          "product": {
+            "metafield": { "value": "vendor-egypt-ceramics" }
+          }
+        }
+      },
+      {
+        "id": "line2",
+        "quantity": 1,
+        "merchandise": {
+          "__typename": "ProductVariant",
+          "id": "variant2",
+          "product": {
+            "metafield": { "value": "vendor-egypt-ceramics" }
+          }
+        }
+      },
+      {
+        "id": "line3",
+        "quantity": 1,
+        "merchandise": {
+          "__typename": "ProductVariant",
+          "id": "variant3",
+          "product": {
+            "metafield": { "value": "vendor-egypt-ceramics" }
+          }
+        }
+      }
+    ]
+  },
+  "discount": { "discountClasses": ["PRODUCT"] }
+}

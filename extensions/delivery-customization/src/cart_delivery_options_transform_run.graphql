@@ -1,0 +1,21 @@
+query RunInput {
+  cart {
+    deliveryGroups {
+      id
+      deliveryOptions {
+        handle
+        title
+      }
+      cartLines {
+        merchandise {
+          __typename
+          ... on ProductVariant {
+            product {
+              hasAnyTag(tags: ["fragile"])
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "graphql-code-generator",
+  "version": "0.17.99",
+  "description": "Local stub. Real codegen is handled by `shopify app function typegen`.",
+  "bin": { "graphql-code-generator": "index.js" }
+}
