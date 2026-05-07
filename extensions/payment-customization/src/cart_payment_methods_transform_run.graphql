@@ -1,0 +1,13 @@
+query CartPaymentMethodsTransformRunInput {
+  cart {
+    deliveryGroups {
+      deliveryAddress {
+        countryCode
+      }
+    }
+  }
+  paymentMethods {
+    id
+    name
+  }
+}
