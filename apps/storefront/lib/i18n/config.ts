@@ -1,3 +1,5 @@
+import type { CountryCode, LanguageCode } from "@shopify/hydrogen-react/storefront-api-types";
+
 export type Locale = "en" | "ar" | "fr";
 
 export const locales: Locale[] = ["en", "ar", "fr"];
@@ -5,9 +7,9 @@ export const locales: Locale[] = ["en", "ar", "fr"];
 export const i18nConfig: Record<
   Locale,
   {
-    language: string;
+    language: LanguageCode;
     currency: string;
-    countryCode: string;
+    countryCode: CountryCode;
     direction: "ltr" | "rtl";
     label: string;
     flag: string;
