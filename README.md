@@ -1,13 +1,6 @@
 # ArtisanHub — International Multi-Vendor Artisan Marketplace
 
-A full-stack Shopify marketplace built to demonstrate end-to-end proficiency
-across every major Shopify developer tool. Artisan vendors manage their
-products through an embedded Shopify Admin dashboard; international buyers
-browse and purchase through a custom Next.js storefront in their language
-and currency.
-
-**Live Storefront:** [artisanhub.vercel.app](https://artisanhub.vercel.app)  
-**Vendor App:** Installable on any Shopify dev store (see setup below)
+Multi-language, multi-currency Shopify marketplace — Next.js storefront, Remix embedded admin app, Shopify Functions and Flow, in a TypeScript monorepo.
 
 ---
 
